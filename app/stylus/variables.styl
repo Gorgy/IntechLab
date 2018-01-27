@@ -1,0 +1,88 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Глобальные переменные.                                           # ||
+|| #################################################################### ||
+\*======================================================================*/
+
+/* Пути */
+$path-img =                   "../img";          // Путь до картинок
+$path-img-cacss =             "../../img";      // Путь до картинок от cache css (или от inc/less в data-uri)
+$path-css =                   "../css";             // Путь до css
+$path-root-images =           "../../../images";    // Путь до images в корне сайта в less
+$path-root-images-cacss =     "../../../../images"; // Путь до images в корне сайта от cache css
+$path-fonts =                 "../fonts";           // Путь до шрифтов
+$path-fonts-cacss =           "../../fonts";        // Путь до шрифтов от cache css (или от inc/less в data-uri)
+
+
+/* Ширина основного врапера страницы */
+$min-width =  1000px; // минимальная ширина
+$max-width =  1200px; // максимальная ширина
+
+
+/* Шрифты */
+$ff-g =  'Roboto', sans-serif; // глобальный, основной шрифт
+$ff-1 =  'Montserrat', sans-serif; // допшрифт
+$ff-2 =  'Kaushan Script', cursive; // допшрифт
+//$ff-fa =  'FontAwesome';          // шрифт Font Awesome
+$ff-icon = 'icomoon'
+
+$fz-num  =  14;
+$fz-g =  ($fz-num)px; // глобальный, основной размер текста
+
+
+/* Цвета */
+$cf =  #ffffff
+$c0 = #000000
+$c9 = #999
+
+$c-url =  $brand-primary; // цвет урла
+
+//primary-text =  #212121;
+$primary-text =  #484848;
+$secondary-text =  #3E3E3E;
+
+$brand-primary =  $brand-blue;
+// $brand-success  =  #27AE60;
+// $brand-danger  =  #F82D56;
+
+$body-bg =  $cf;
+$body-color =  $primary-text;
+
+$brand-red = #f38181
+$brand-yellow = #fce38a
+$brand-light = #eaffd0
+$brand-blue = #95e1d3
+
+// $placeholderText  =  darken($grey,26%);
+
+/** Media queries промежутки */
+// Слишком маленькие устройства / телефоны
+$screen-sxs-min =  320px;
+$screen-sphone =  $screen-sxs-min;
+
+// Очень маленькие устройства / телефоны
+$screen-xs-min =  480px;
+$screen-phone =  $screen-xs-min;
+
+// Малые устройства / планшеты
+$screen-sm-min =  768px;
+$screen-tablet =  $screen-sm-min;
+
+// Средние устройства / настольные
+$screen-md-min =  992px;
+$screen-desktop =  $screen-md-min;
+
+// Большие устройства / настольные
+$screen-lg-min =  1200px;
+$screen-lg-desktop =  $screen-lg-min;
+
+// Настольные решения
+$screen-xlg-min =  1500px;
+$screen-xlg-desktop =  $screen-xlg-min;
+
+// Максимальные значения
+$screen-sxs-max =  ($screen-xs-min - 1);
+$screen-xs-max =  ($screen-sm-min - 1);
+$screen-sm-max =  ($screen-md-min - 1);
+$screen-md-max =  ($screen-lg-min - 1);
+$screen-lg-max =  ($screen-xlg-min - 1);

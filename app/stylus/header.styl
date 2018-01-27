@@ -1,0 +1,107 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Файл header.styl                                                 # ||
+|| # Здесь хранятся стили для шапки сайта.                            # ||
+|| #################################################################### ||
+\*======================================================================*/
+.header{
+	position : fixed
+	z-index : 99
+	coords(0,0,auto,0)
+	transition .2s ease
+
+	&.inverse{
+		background-color : alpha($brand-red,.8)
+	}
+
+	&__logo{
+		color : $cf
+		font-size : 30px
+
+		&:hover{
+			color : $cf
+			text-decoration : none
+		}
+	}
+
+	&__menu{
+		text-align : right
+	}
+}
+
+.welcome{
+	position : relative;
+
+	&__title{
+		section-title($cf)
+		font-size : 72px
+		max-width : 830px
+		color : $cf
+
+		span{
+			font-size : 150px
+		}
+	}
+
+	&__btn{
+		background-color : transparent
+		border : 3px solid $cf
+		color : $cf
+		
+		&:hover{
+			background-color : $cf
+		}
+	}
+
+	.swiper-slide{
+		text-align : center
+		height : 100vh
+		min-height 1000px
+		display : flex
+		flex-direction column
+		justify-content : center
+		align-items : center
+		background : embedurl( $path-img + '/banner.jpg') 50% 50% no-repeat
+		background-size : cover;
+
+		> *{
+			position : relative
+		}
+
+		&:before{
+			content ''
+			abs-center()
+			opacity : .9
+			background linear-gradient(to bottom, $brand-red 0%, $brand-yellow 100%)
+		}
+	}
+
+	.swiper-pagination{
+		abs(auto,50%,10px)
+		transform translate(50%,0)
+
+		.slider-tab{
+			font-size : 18px
+			color : $cf
+			border-top : 3px solid $cf
+			font-family : $ff-1
+			opacity : .7
+			transition .2s ease
+			cursor pointer
+			text-transform : uppercase
+
+			span{
+				font-size : 24px
+				font-weight : 700
+			}
+
+			&:hover{
+				opacity : .85
+			}
+
+			&.active{
+				opacity : 1
+			}
+		}
+	}
+}

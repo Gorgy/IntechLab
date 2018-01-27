@@ -1,0 +1,61 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Файл blocks.styl                                                 # ||
+|| # Здесь хранятся стили для BEM.                                    # ||
+|| #################################################################### ||
+\*======================================================================*/
+.menu{
+
+	ul{
+		padding : 0
+		margin : 0
+		list-style none
+	}
+
+	&__item{
+
+		a{
+			display : block
+			font-family : $ff-1
+			text-transform : uppercase
+			color : $cf
+			border-bottom : 3px solid transparent
+			
+			&:hover{
+				color : $brand-yellow;
+				text-decoration : none
+			}
+		}
+
+		&_active{
+			a{
+				color : $brand-yellow
+				border-bottom-color : @color;
+			}
+		}
+
+		&_cart{
+
+			a{
+				text-indent: 100%
+				white-space: nowrap
+				overflow: hidden
+				background : embedurl( $path-img + '/svg/cart.svg') 0 0 no-repeat
+				background-size : contain
+				size(18px,14px)
+			}
+		}
+
+		&_search{
+
+			a{
+				text-indent: 100%
+				white-space: nowrap
+				overflow: hidden
+				background : embedurl( $path-img + '/svg/search.svg') 0 0 no-repeat
+				background-size : contain
+				size(18px,18px)
+			}
+		}
+	}
+}

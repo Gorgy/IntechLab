@@ -1,0 +1,41 @@
+footer.footer
+	.container
+		.row
+			.col-sm-5
+				.footer__about
+					a.footer__logo(href="javascript:void(0)") Mogo
+					.footer-about__text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					.footer__subscribes
+						.footer-subscribes__title <span>15k</span> followers
+						.footer-subscribes__follow
+							h4 Follow Us:
+							ul.social.list-inline
+								for item in social
+									li.social__item
+										a(href=item.url)
+											i(class=item.icon)
+					form.subscribe
+						input.subscribe__input(type="text", placeholder="Your Email..." name="form-email")
+						button.btn.subscribe__btn(type="button") Subscribe
+			.col-sm-4
+				.footer__blog
+					h3 blogs
+					for blog in blogs
+						.footer-blog__item
+							img(src="./img/blog/" + blog.image)
+							.footer-blog__desc
+								h4.footer-blog__title= blog.title
+								span.footer-blog__date= blog.date
+			.col-sm-3
+				.footer__instagram
+					h3 instagram
+					.instagram
+						for image in instagram
+							a.instagram__item(href=image.url)
+								img(src=image.image)
+						a.instagram__link(href="javascript:void(0)") View more photos
+
+	.container
+		.footer__copyright.text-center &copy; 2016 MoGo free PSD template by&nbsp
+			a(href="javascript:void(0);") Laaqiq

@@ -1,0 +1,21 @@
+section.advantages
+	.container
+		h2.advantages__title We work with&nbsp
+			span Amazing Services
+		.advantages__list
+			each item, index in advantages
+				if ( index == 2 )
+					.advantages__item
+						img(src="./img/advantages/" + item.image)
+						.advantages__txt
+							h3.title= item.title
+							p= item.text
+					.advantages__border
+				else
+					.advantages__item
+						img(src="./img/advantages/" + item.image)
+						.advantages__txt
+							h3.title= item.title
+							p= item.text
+
+

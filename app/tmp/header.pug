@@ -1,0 +1,32 @@
+header.header
+	.container
+		.row
+			.col-sm-2
+				a.header__logo.title(href="javascript:void(0)") MoGo
+			.col-sm-10.col-md-8.col-md-ofset-2
+				nav.header__menu
+					nav.menu
+						ul.list-inline
+							for menu in menuList
+								+menu__item(menu)
+
+section.welcome
+	.swiper-container
+		.swiper-wrapper
+			.swiper-slide(data-name="Intro")
+				h1.welcome__title Creative Template&nbsp;
+					span.title Welcome to MoGo
+				button(type="button").btn.welcome__btn Learn more
+			.swiper-slide(data-name="Work")
+				h1.welcome__title Creative Template&nbsp;
+					span.title Welcome to MoGo
+				button(type="button").btn.welcome__btn Learn more
+			.swiper-slide(data-name="About")
+				h1.welcome__title Creative Template&nbsp;
+					span.title Welcome to MoGo
+				button(type="button").btn.welcome__btn Learn more
+			.swiper-slide(data-name="Contacts")
+				h1.welcome__title Creative Template&nbsp;
+					span.title Welcome to MoGo
+				button(type="button").btn.welcome__btn Learn more
+		.swiper-pagination.container

@@ -1,0 +1,16 @@
+//- Данные для страницы
+include tmp/data.pug
+//- Mixins
+include tmp/mixins.pug
+
+doctype html
+html(lang="ru")
+	//- HEAD
+	include tmp/head.pug
+	body
+		include tmp/header.pug
+		include tmp/about.pug
+		include tmp/numbers.pug
+		include tmp/advantages.pug
+		include tmp/footer.pug
+		script(src='./js/common.min.js')

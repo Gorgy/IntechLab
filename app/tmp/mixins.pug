@@ -1,0 +1,10 @@
+//- Menu Items
+mixin menu__item(menu)
+	li(class="menu__item " + menu.class)
+		a(href=menu.link)= menu.name
+
+//- Numbers
+mixin numbers(num)
+	div.numbers__item
+		h4= num.num
+		span= num.text

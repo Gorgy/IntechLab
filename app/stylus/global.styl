@@ -1,0 +1,117 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Файл global.styl                                                 # ||
+|| # Здесь хранятся глобальные настройки.                             # ||
+|| #################################################################### ||
+\*======================================================================*/
+
+// Фикс для ie, который не понимает правильно viewport
+@-ms-viewport {
+	width : auto;
+}
+
+* {
+	outline: none !important;
+	box-sizing: border-box;
+}
+
+body {
+	line-height : 1;
+}
+
+ol, ul {
+//list-style : none;
+}
+
+blockquote, q {
+	quotes : none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content : '';
+}
+
+table {
+	border-collapse : collapse;
+	border-spacing  : 0;
+}
+
+html {
+	background-color : $body-bg;
+	font-size: $fz-g;
+	height : 100%;
+	min-height :100%;
+}
+
+body {
+	font            : $fz-g/1.45 $ff-g;
+	margin          : 0;
+	background      : $body-bg;
+	color           : $body-color;
+	height: 100%;
+	min-height: 100%;
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	//overflow hidden
+}
+
+.clearfix{
+	clearfix();
+}
+
+a {
+	text-decoration : none;
+	cursor          : pointer;
+	color           : $c-url;
+	transition(.2s ease-in-out);
+
+	&:hover {
+		color : darken($c-url, 10);
+		text-decoration : none;
+	}
+}
+
+img {
+	max-width : 100%;
+	outline   : none;
+	border    : 0;
+
+	&.img-responsive{
+		width : 100%;
+	}
+}
+
+// ==========================================
+// Вспомогательные классы
+// ==========================================
+.p0 { padding: 0; }
+.p5 { padding: 5px; }
+.ph5 { padding: 5px 0; }
+.pv5 { padding: 0 5px; }
+.p15 { padding: 15px; }
+.ph15 { padding: 15px 0; }
+.pv15 { padding: 0 15px; }
+
+.mt0 { margin-top: 0; }
+.mb0 { margin-bottom: 0; }
+
+.row {
+
+	&.m-5 {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+}
+
+.title{
+	font-family : $ff-1
+	font-weight : 700
+}
+
+.btn{
+	border-radius : 0
+	font-family : $ff-1
+	text-transform : uppercase;
+	transition: .2s ease
+}
