@@ -13,20 +13,9 @@ header.header
 section.welcome
 	.swiper-container
 		.swiper-wrapper
-			.swiper-slide(data-name="Intro")
-				h1.welcome__title Creative Template&nbsp;
-					span.title Welcome to MoGo
-				button(type="button").btn.welcome__btn Learn more
-			.swiper-slide(data-name="Work")
-				h1.welcome__title Creative Template&nbsp;
-					span.title Welcome to MoGo
-				button(type="button").btn.welcome__btn Learn more
-			.swiper-slide(data-name="About")
-				h1.welcome__title Creative Template&nbsp;
-					span.title Welcome to MoGo
-				button(type="button").btn.welcome__btn Learn more
-			.swiper-slide(data-name="Contacts")
-				h1.welcome__title Creative Template&nbsp;
-					span.title Welcome to MoGo
-				button(type="button").btn.welcome__btn Learn more
+			for slide in slider
+				.swiper-slide(data-name=slide.name)
+					h1.welcome__title= slide.title
+						span.title= slide.subtitle
+					a(href=slide.btnurl).btn.welcome__btn= slide.btntext
 		.swiper-pagination.container

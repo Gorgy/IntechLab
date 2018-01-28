@@ -7569,6 +7569,7 @@ img.img-responsive {
   color: #fff;
   border-bottom: 3px solid transparent;
   padding: 10px 0 7px;
+  text-decoration: none;
 }
 .menu__item a:hover {
   color: #fce38a;
@@ -7734,7 +7735,8 @@ img.img-responsive {
   padding: 10px 0;
   line-height: 1;
 }
-.header__logo:hover {
+.header__logo:hover,
+.header__logo:focus {
   color: #fff;
   text-decoration: none;
 }
