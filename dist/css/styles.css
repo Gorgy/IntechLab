@@ -8146,7 +8146,8 @@ img.img-responsive {
   text-decoration: none;
   margin-bottom: 20px;
 }
-.footer__logo:hover {
+.footer__logo:hover,
+.footer__logo:focusgit {
   color: #ccc;
   text-decoration: none;
 }
