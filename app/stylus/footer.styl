@@ -4,3 +4,127 @@
 || # Здесь хранятся стили для футера сайта.                           # ||
 || #################################################################### ||
 \*======================================================================*/
+.footer{
+	background : darken($cf, 3%)
+
+	h3{
+		font : 14px/1.5 $ff-1
+		font-weight : 400
+		text-transform : uppercase
+		//margin : 0
+	}
+
+	&__logo{
+		font-size : 46px
+		display: inline-block
+		padding: 10px 0
+		line-height: 1
+		color : darken($cf,20%)
+		text-decoration : none
+		margin-bottom : 20px
+		&:hover{
+			color : darken($cf,20%)
+			text-decoration : none
+		}
+	}
+
+	&__about{
+		padding : 60px 0 0 0
+	}
+
+	&-about {
+		&__text {
+			line-height : 1.75
+			color : $c9
+		}
+	}
+
+	&__subscribes{
+		margin-top : 38px
+		margin-bottom : 21px
+	}
+
+	&-subscribes{
+
+		&__title{
+			font-family : $ff-1
+			font-size : 14px
+			padding-bottom : 12px
+			border-bottom : 1px solid darken($cf,10%)
+
+			span{
+				font-size : 18px
+				font-weight : 700
+			}
+		}
+
+		&__follow{
+			display : flex
+			align-items : center
+
+			h4{
+				font-size : 14px
+				font-weight : 300
+				font-style italic
+				margin : 17px 25px 17px 0
+			}
+		}
+	}
+
+	&__blog
+	&__instagram{
+		padding : 56px 0 0
+	}
+	&-blog{
+
+		&__item{
+			display : flex
+			margin-top : 32px
+
+			img{
+				align-self flex-end
+			}
+		}
+		&__desc{
+			margin-left : 20px
+			align-self: flex-end;
+		}
+		&__title{
+			text-transform : uppercase
+			margin : 0 0 5px
+			font : 12px/1.55 $ff-1
+		}
+		&__date{
+			font-size : 13px
+			font-weight : 300
+			font-style italic
+		}
+	}
+
+	&__copyright{
+		border-top : 1px solid  darken($cf,10%)
+		font : 14px/1.5 $ff-1
+		margin-top : 67px
+		padding : 20px 0
+		
+		a{
+			color : $brand-red
+			text-decoration : none
+			
+			&:hover{
+				text-decoration : none
+				color : darken(@color,20%)
+			}
+		}
+	}
+
+	.instagram{
+		margin-top : 33px
+
+		&__item{
+			$width = 100% / 3
+			flex 1 0 $width
+			-ms-flex 1 0 32%
+		}
+	}
+}

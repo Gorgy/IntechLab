@@ -3,7 +3,7 @@ footer.footer
 		.row
 			.col-sm-5
 				.footer__about
-					a.footer__logo(href="javascript:void(0)") Mogo
+					a.footer__logo.title(href="javascript:void(0)") MoGo
 					.footer-about__text
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 					.footer__subscribes
@@ -16,7 +16,7 @@ footer.footer
 										a(href=item.url)
 											i(class=item.icon)
 					form.subscribe
-						input.subscribe__input(type="text", placeholder="Your Email..." name="form-email")
+						input.subscribe__input.form-control(type="text", placeholder="Your Email..." name="form-email")
 						button.btn.subscribe__btn(type="button") Subscribe
 			.col-sm-4
 				.footer__blog
@@ -34,7 +34,7 @@ footer.footer
 						for image in instagram
 							a.instagram__item(href=image.url)
 								img(src=image.image)
-						a.instagram__link(href="javascript:void(0)") View more photos
+					a.instagram__link(href="javascript:void(0)") View more photos
 
 	.container
 		.footer__copyright.text-center &copy; 2016 MoGo free PSD template by&nbsp

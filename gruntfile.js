@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                 cwd: 'app/fonts',
                 src: '**',
                 dest: 'dist/fonts/',
-            },
+            }
         },
 
         concat: {
@@ -47,6 +47,8 @@ module.exports = function(grunt) {
 		stylus: {
 			compile: {
 				options: {
+					compress: false,
+					'include css' : true,
 					paths: ['app/stylus'],
 					urlfunc: 'data-uri', // use data-uri('test.png') in our code to trigger Data URI embedding
 				},
@@ -115,6 +117,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'stylus', 'pug', 'copy', 'watch']);
+    grunt.registerTask('default', ['copy', 'concat', 'uglify', 'imagemin', 'stylus', 'pug', 'watch']);
 
 };

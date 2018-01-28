@@ -5,6 +5,7 @@
 || #################################################################### ||
 \*======================================================================*/
 .menu{
+	margin-right : -25px
 
 	ul{
 		padding : 0
@@ -13,6 +14,10 @@
 	}
 
 	&__item{
+		display : inline-block
+		padding-left : 24px
+		padding-right : 24px
+		vertical-align : top
 
 		a{
 			display : block
@@ -20,6 +25,7 @@
 			text-transform : uppercase
 			color : $cf
 			border-bottom : 3px solid transparent
+			padding : 10px 0 7px
 			
 			&:hover{
 				color : $brand-yellow;
@@ -40,9 +46,9 @@
 				text-indent: 100%
 				white-space: nowrap
 				overflow: hidden
-				background : embedurl( $path-img + '/svg/cart.svg') 0 0 no-repeat
+				background : embedurl( $path-img + '/svg/cart.svg') 50% 50% no-repeat
 				background-size : contain
-				size(18px,14px)
+				size(18px,34px)
 			}
 		}
 
@@ -52,10 +58,93 @@
 				text-indent: 100%
 				white-space: nowrap
 				overflow: hidden
-				background : embedurl( $path-img + '/svg/search.svg') 0 0 no-repeat
+				background : embedurl( $path-img + '/svg/search.svg') 50% 50% no-repeat
 				background-size : contain
-				size(18px,18px)
+				size(18px,38px)
 			}
+		}
+	}
+}
+
+.social{
+	margin-bottom : 0
+
+	&__item{
+		a{
+			color : $brand-primary
+			font-size : 16px
+
+			&:hover{
+				color : darken($brand-primary,25%)
+			}
+		}
+	}
+}
+
+.subscribe{
+	display : flex
+	max-width : 380px
+
+	&__input{
+		border : 1px solid darken($cf,9%)
+		box-shadow none
+		height : 40px
+		border-right : 0
+		border-radius : 0
+		background-color : $cf
+		placeholder((font-style italic)(font-weight 300)(font-size 15px)(color darken($cf,20%)))
+
+		&:focus {
+			outline : none
+			border : @border
+			border-right : 0
+			box-shadow @box-shadow
+		}
+	}
+
+	&__btn{
+		background-color : $brand-primary
+		color : $cf
+		font-family : $ff-1
+		font-weight : 700
+		padding-left : 30px
+		padding-right : 30px
+		
+		&:hover{
+			color : $cf
+			background : darken($brand-primary,20%)
+		}
+	}
+}
+
+.instagram{
+	margin-left : -1px
+	margin-right : -1px
+	display : flex
+	flex-wrap: wrap
+
+	&__item{
+		display : block
+		padding : 1px
+
+		img{
+			width : 100%
+		}
+	}
+
+	&__link{
+		display : inline-block
+		font-weight : 300
+		font-style : italic
+		font-size : 13px
+		text-decoration : none
+		color : $primary-text
+		padding : 10px 0
+		margin-top : 6px
+
+		&:hover{
+			color : @color
+			text-decoration : underline
 		}
 	}
 }

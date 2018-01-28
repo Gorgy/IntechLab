@@ -4,28 +4,34 @@
 || # Здесь хранятся стили для шапки сайта.                            # ||
 || #################################################################### ||
 \*======================================================================*/
-.header{
+.header {
 	position : fixed
 	z-index : 99
-	coords(0,0,auto,0)
+	coords(0, 0, auto, 0)
 	transition .2s ease
+	padding : 15px 0
 
-	&.inverse{
-		background-color : alpha($brand-red,.8)
+	&.inverse {
+		padding : 10px 0
+		background-color : alpha($brand-red, .8)
 	}
 
-	&__logo{
+	&__logo {
 		color : $cf
 		font-size : 30px
+		display: inline-block
+		padding: 10px 0
+		line-height: 1
 
-		&:hover{
+		&:hover {
 			color : $cf
 			text-decoration : none
 		}
 	}
 
-	&__menu{
+	&__menu {
 		text-align : right
+		padding : 10px 0
 	}
 }
 
@@ -35,11 +41,17 @@
 	&__title{
 		section-title($cf)
 		font-size : 72px
+		line-height : .95
 		max-width : 830px
 		color : $cf
 
 		span{
 			font-size : 150px
+			margin-top : 45px
+		}
+
+		&:after{
+			margin : 55px auto 40px
 		}
 	}
 
@@ -47,6 +59,8 @@
 		background-color : transparent
 		border : 3px solid $cf
 		color : $cf
+		padding-left : 29px
+		padding-right : 29px
 		
 		&:hover{
 			background-color : $cf
@@ -56,7 +70,7 @@
 	.swiper-slide{
 		text-align : center
 		height : 100vh
-		min-height 1000px
+		min-height 800px
 		display : flex
 		flex-direction column
 		justify-content : center
@@ -77,11 +91,12 @@
 	}
 
 	.swiper-pagination{
-		abs(auto,50%,10px)
+		abs(auto,50%,0)
 		transform translate(50%,0)
 
 		.slider-tab{
 			font-size : 18px
+			text-align : left
 			color : $cf
 			border-top : 3px solid $cf
 			font-family : $ff-1
@@ -89,10 +104,12 @@
 			transition .2s ease
 			cursor pointer
 			text-transform : uppercase
+			padding 18px 0 17px
 
 			span{
 				font-size : 24px
 				font-weight : 700
+				margin-right : 5px
 			}
 
 			&:hover{
